@@ -1,10 +1,10 @@
 <body>
-    <section *ngFor = "let user of userdata">
+    <section *ngFor = "let user of userdata" [routerLink]="['/user', user.login.username]">
         <article>
             <img src="{{user.picture.thumbnail}}" alt="portrait thumbnail"/>
         </article>
         <aside>
-            <h2><a routerLink="/{{user.login.username}}" href>{{user.name.first}} {{user.name.last}}</a></h2>
+            <h2>{{user.name.first}} {{user.name.last}}</h2>
             <p>{{user.email}}</p>
         </aside>
     </section>

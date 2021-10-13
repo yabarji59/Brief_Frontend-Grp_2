@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { UsercardComponent } from './usercard/usercard.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
@@ -12,6 +13,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     UserdetailsComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule
   ],
   providers: [],

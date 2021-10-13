@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
@@ -9,9 +11,18 @@ import { User } from '../user';
 })
 export class UserdetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private userService: UserService,
+    private location: Location) { }
 
   ngOnInit(): void {
+
+    this.getUser();
+  }
+
+  getUser(): void {
+    const username = this.route.snapshot.paramMap.get('username');
+    this.userService.getUser(username);
   }
 
 }
