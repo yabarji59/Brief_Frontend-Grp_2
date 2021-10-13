@@ -10,7 +10,7 @@ import { User } from '../user';
 export class UsercardComponent implements OnInit{
 
   utilisateurs: any = results.results;
-  userdata: User[]
+  userdata: User[];
 
   constructor() {
    }

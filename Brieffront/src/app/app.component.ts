@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsercardComponent } from './usercard/usercard.component';
+import { User } from './user';
 import results from '../assets/JSON_Data_User.json';
 
 @Component({
@@ -8,12 +8,6 @@ import results from '../assets/JSON_Data_User.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  users: UsercardComponent[] = null;
-  Utilisateurs: any = results;
-
-  utilAffiche() {
-    console.log(this.Utilisateurs);
-  }
 
   ngOnInit() {
   }
