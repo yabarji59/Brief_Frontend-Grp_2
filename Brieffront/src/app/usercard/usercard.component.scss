@@ -1,8 +1,24 @@
+body {
+    padding: 10px;
+}
+
 section {
     background-color: blanchedalmond;
     border-radius: 20px;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 li {
     list-style: unchecked;
+}
+
+section article img{
+    border-radius: 50%;
+    padding: 10px;
+}
+
+section aside {
+    float: left;
+    padding: 10px;
 }

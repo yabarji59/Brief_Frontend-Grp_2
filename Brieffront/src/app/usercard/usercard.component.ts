@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import results from '../../assets/JSON_Data_User.json';
 import { User } from '../user';
+import { UserService } from './../user.service';
 
 @Component({
   selector: 'app-usercard',
@@ -9,14 +9,17 @@ import { User } from '../user';
 })
 export class UsercardComponent implements OnInit{
 
-  utilisateurs: any = results.results;
   userdata: User[];
 
-  constructor() {
+  constructor(private userService: UserService) {
    }
 
+   getUsers(): void {
+    this.userdata = this.userService.getUsers();
+  }
+
    ngOnInit(): void {
-    this.userdata = <User[]>this.utilisateurs;
+    this.userdata = this.userService.getUsers();
   }
   
 }
