@@ -1,6 +1,5 @@
-<body *ngFor = "let user of users">
-        <h4>
-            {{ user.nom }} {{ user.prenom}}
-        </h4>
-        <p>{{ user.email }}</p>
-    </body>
+<body>
+    <section *ngFor = "let user of userdata">
+        <h2>{{user.name.first}} {{user.name.last}}</h2>
+    </section>
+</body>

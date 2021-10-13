@@ -1,19 +1,22 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import results from '../../assets/JSON_Data_User.json';
+import { User } from '../user';
 
 @Component({
   selector: 'app-usercard',
   templateUrl: './usercard.component.html',
   styleUrls: ['./usercard.component.scss']
 })
-export class UsercardComponent {
+export class UsercardComponent implements OnInit{
 
-  nom:string= "hall";
-  prenom: string;
-  email: string;
-
-  
+  utilisateurs: any = results.results;
+  userdata: User[]
 
   constructor() {
    }
+
+   ngOnInit(): void {
+    this.userdata = <User[]>this.utilisateurs;
+  }
   
 }
