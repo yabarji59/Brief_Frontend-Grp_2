@@ -2,21 +2,22 @@
 <div class="container">
     <div class="card" *ngFor="let user of users" [routerLink]="['/user', user.login.username]">
         <section>
-        <article>
-            <img src="{{user.picture.thumbnail}}" alt="portrait thumbnail" />
-        </article>
-        <aside>
-            <h4><b> {{ user.name.first }} {{ user.name.last }}</b></h4>
-            <p>{{user.email}}</p>
-        </aside>
-        <div class="card-container">
-            <img *ngIf="user.dob.age < 40" src="../../assets/icon-user/rookie.svg" class="img" alt="Avatar" style="width: 60px">
-            <img *ngIf="user.dob.age <= 60 && user.dob.age >= 40" src="../../assets/icon-user/advance.svg" alt="Avatar"
-                style="width: 60px">
-            <img *ngIf="user.dob.age > 60" src="../../assets/icon-user/expert.svg" alt="Avatar" style="width: 60px">
-            <!-- <img src="../../assets/icon-user/{{getImageByAge(user.dob.age)}}" alt="Avatar" style="width: 30%"> -->
-        </div>
-    </section>
+            <article>
+                <img src="{{user.picture.thumbnail}}" alt="portrait thumbnail" />
+            </article>
+            <aside>
+                <h4><b> {{ user.name.first }} {{ user.name.last }}</b></h4>
+                <p>{{user.email}}</p>
+            </aside>
+            <div class="card-container">
+                <img *ngIf="user.dob.age < 40" src="../../assets/icon-user/rookie.svg" class="img" alt="Avatar"
+                    style="width: 60px">
+                <img *ngIf="user.dob.age <= 60 && user.dob.age >= 40" src="../../assets/icon-user/advance.svg"
+                    alt="Avatar" style="width: 60px">
+                <img *ngIf="user.dob.age > 60" src="../../assets/icon-user/expert.svg" alt="Avatar" style="width: 60px">
+                <!-- <img src="../../assets/icon-user/{{getImageByAge(user.dob.age)}}" alt="Avatar" style="width: 30%"> -->
+            </div>
+        </section>
     </div>
 </div>
 
