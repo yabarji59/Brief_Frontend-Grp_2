@@ -7,5 +7,8 @@
             <h2>{{user.name.first}} {{user.name.last}}</h2>
             <p>{{user.email}}</p>
         </aside>
+        <div class="ageicon">
+            <img src="../../assets/Icon_User/{{getImageByAge(user.dob.age)}}" alt="age icon" style="width: 60px">
+        </div>
     </section>
 </body>

@@ -21,5 +21,16 @@ export class UsercardComponent implements OnInit{
    ngOnInit(): void {
     this.userdata = this.userService.getUsers();
   }
+
+  getImageByAge(age: number): string {
+    if (age < 40) {
+      return 'rookie.svg';
+    } else if (age <= 60 && age >= 40) {
+      return 'advance.svg';
+    } else if (age > 60) {
+      return 'expert.svg';
+    }
+    return '';
+  }
   
 }
