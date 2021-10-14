@@ -11,7 +11,9 @@ export class UserListComponent implements OnInit {
   users: User[];
   constructor() {}
 
+  // ngOninit = fonction déclanché à la fin de l'initialisation du composant
   ngOnInit(): void {
+    // <User[]> permet de caster this.usersJson (les données JSON) en tableau de user (référence à l'interface)
     this.users = <User[]>this.usersJson;
     console.log(this.users);
   }

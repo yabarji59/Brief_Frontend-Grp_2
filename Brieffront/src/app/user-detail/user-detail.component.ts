@@ -12,16 +12,34 @@ export class UserDetailComponent implements OnInit {
   usersJson: any = userJson.results;
   users: User[];
   user: User;
-  userNameParameter: string;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.users = <User[]>this.usersJson;
-    this.userNameParameter = this.route.snapshot.paramMap.get('username');
+
     this.user = this.users.find(
-      (user) => user.login.username == this.userNameParameter
+      (user) =>
+        user.login.username == this.route.snapshot.paramMap.get('username')
     );
+
+    /*
+    for (const user of this.users) {
+      if (user.login.username == this.route.snapshot.paramMap.get('username')) {
+        this.user = user;
+      }
+    } */
+
+    /*
+    for (let i = 0; i < this.users.length; i++) {
+      if (
+        this.users[i].login.username ==
+        this.route.snapshot.paramMap.get('username')
+      ) {
+        this.user = this.users[i];
+      }
+    } */
+
     console.log(this.user);
   }
 }
