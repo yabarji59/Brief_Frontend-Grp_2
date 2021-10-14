@@ -11,18 +11,24 @@ import { User } from '../user';
 })
 export class UserdetailsComponent implements OnInit {
 
+  user: User;
+  userdata: User[];
+  username: string;
+
   constructor(private route: ActivatedRoute,
     private userService: UserService,
     private location: Location) { }
 
   ngOnInit(): void {
 
+    this.userdata = this.userService.getUsers();
     this.getUser();
   }
 
   getUser(): void {
-    const username = this.route.snapshot.paramMap.get('username');
-    this.userService.getUser(username);
+    this.username = this.route.snapshot.paramMap.get('user.login.username');
+    this.user = this.userdata.find(
+      (user) => user.login.username == this.username);
   }
 
 }

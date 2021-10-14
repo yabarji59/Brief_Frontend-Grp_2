@@ -1,4 +1,11 @@
 <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Nos développeurs:</h1>
+          </div>
+        </div>
+      </div>
     <section *ngFor = "let user of userdata" [routerLink]="['/user', user.login.username]">
         <article>
             <img src="{{user.picture.thumbnail}}" alt="portrait thumbnail"/>

@@ -1,5 +1,23 @@
 <body>
-    <p>userdetails works!</p>
+    <section>
+        <h1>{{user.name.title}} {{user.name.first}} {{user.name.last}}</h1>
+        <article>
+            <img src="{{user.picture.large}}" alt="portrait details"/>
+        </article>
+        <article>
+            <h3>GENERAL INFO</h3>
+            <p>gender: {{user.gender}}</p>
+            <p>name: {{user.name.title}} {{user.name.first}} {{user.name.last}}</p>
+            <p>age: {{user.dob.age}}</p>
+            <p>hired on the: {{user.registered.date}}</p>
 
-    <section></section>
+            <h3>CONTACT</h3>
+            <p>address: {{user.location.street.number}} {{user.location.street.name}}, {{user.location.postcode}} {{user.location.city}}, {{user.location.state}} {{user.location.country | uppercase}}</p>
+            <p>email: {{user.email}}</p>
+            <p>phone: {{user.phone}}</p>
+            <p>cell: {{user.cell}}</p>
+
+        </article>
+        <button><a routerLink="/users">Back to user list</a></button>
+    </section>
 </body>
