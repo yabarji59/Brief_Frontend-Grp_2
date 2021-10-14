@@ -20,22 +20,3 @@
         </section>
     </div>
 </div>
-
-<!-- version Card grid de apllication
-<h1> Annuaire des collaborateurs </h1>
-<div class="container">
-    <div class="card" *ngFor="let user of users" [routerLink]="['/user', user.login.username]">
-        <img src="{{user.picture.large}}" alt="Avatar" style="width:100%">
-        <div class="card-container">
-            <h4><b> {{ user.name.first }} {{ user.name.last }}</b></h4>
-            <p>{{user.email}}</p>
-            <img *ngIf="user.dob.age < 40" src="../../assets/icon-user/rookie.svg" alt="Avatar" style="width: 30%">
-            <img *ngIf="user.dob.age <= 60 && user.dob.age >= 40" src="../../assets/icon-user/advance.svg" alt="Avatar"
-                style="width: 30%">
-            <img *ngIf="user.dob.age > 60" src="../../assets/icon-user/expert.svg" alt="Avatar" style="width: 30%">
-            <img src="../../assets/icon-user/{{getImageByAge(user.dob.age)}}" alt="Avatar" style="width: 30%"> 
-        </div>
-        
-    </div>
-</div>
--->
